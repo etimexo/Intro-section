@@ -1,35 +1,102 @@
-const toggle = document.querySelector(".toggler")
+const toggle = document.querySelector("#toggler")
 const navMenu = document.querySelector(".nav-menu")
 const togglerImage = toggle.querySelector("img")
 const toggleOpen = "./images/icon-menu.svg"
 const toggleClose = "./images/icon-close-menu.svg"
 const features = document.querySelector(".features")
-const dropDown1 = document.querySelector(".dropdown1")
-features.addEventListener("click", function feat() {
-    features.classList.toggle("dropdown1")
-})
-toggle.addEventListener ("click", () => {
+const dropdown1 = document.querySelector(".dropdown1")
+const company = document.querySelector(".company")
+const dropdown2 = document.querySelector(".dropdown2")
+let isDropdown1Hovered = false
+let isDropdown2Hovered = false
+features.addEventListener("mouseenter", function () {
+    dropdown1.classList.add("active")
+  })
+  
+  features.addEventListener("mouseleave", function () {
+        dropdown1.classList.remove("active")
+  })
+  features.addEventListener("mouseleave", function () {
+    if (!isDropdown1Hovered) {
+      dropdown1.classList.remove("active");
+    }
+  });
+  
+  dropdown1.addEventListener("mouseenter", function () {
+    isDropdown1Hovered = true;
+  });
+  dropdown1.addEventListener("mouseleave", function () {
+    isDropdown1Hovered = false;
+    dropdown1.classList.remove("active");
+  });
+  
+  
+  company.addEventListener("mouseenter", function () {
+    dropdown2.classList.add("active")
+  })
+  
+  company.addEventListener("mouseleave", function () {
+    dropdown2.classList.remove("active")
+  })
+toggle.addEventListener("click", () => {
     toggle.classList.toggle("active")
     navMenu.classList.toggle("active")
-    if (toggle.classList.contains("acitve")) {
-        togglerImage.src = toggleClose  
+    if ( toggle.classList.contains("active")) {
+        togglerImage.src = toggleClose
     } else {
         togglerImage.src = toggleOpen
     }
 })
-document.addEventListener("click", (event) => {
-    const target = event.target
-    const isNavMenuClicked = target.classList.contains("nav-menu") || target.closest(".nav-menu")
-    const isToggleClicked = target.classList.contains("toggler") || target.closest(".toggler")
-    if (!isNavMenuClicked && !isToggleClicked) {
-      toggle.classList.remove("active")
-      navMenu.classList.remove("active")
-      togglerImage.src = toggleOpen
-    }
-})
-document.querySelectorAll(".nav-item").forEach(n => n.addEventListener("click", () => {
-    toggle.classList.remove("active")
-    navMenu.classList.remove("active")
-    togglerImage.src = toggleOpen
 
-}))
+// const toggle = document.querySelector(".toggler");
+// const navMenu = document.querySelector(".nav-menu");
+// const togglerImage = toggle.querySelector("img");
+// const toggleOpen = "./images/icon-menu.svg";
+// const toggleClose = "./images/icon-close-menu.svg";
+// const features = document.querySelector(".features");
+// const dropdown1 = document.querySelector(".dropdown1");
+// const company = document.querySelector(".company");
+// const dropdown2 = document.querySelector(".dropdown2");
+// let isDropdown1Hovered = false;
+// let isDropdown2Hovered = false;
+
+// features.addEventListener("mouseenter", function () {
+//   dropdown1.classList.add("active");
+// });
+
+// features.addEventListener("mouseleave", function () {
+//   if (!isDropdown1Hovered) {
+//     dropdown1.classList.remove("active");
+//   }
+// });
+
+// dropdown1.addEventListener("mouseenter", function () {
+//   isDropdown1Hovered = true;
+// });
+
+// dropdown1.addEventListener("mouseleave", function () {
+//   isDropdown1Hovered = false;
+//   setTimeout(() => {
+//     if (!isDropdown1Hovered) {
+//       dropdown1.classList.remove("active");
+//     }
+//   }, 200); // Add a slight delay before removing the "active" class
+// });
+
+// company.addEventListener("mouseenter", function () {
+//   dropdown2.classList.add("active");
+// });
+
+// company.addEventListener("mouseleave", function () {
+//   dropdown2.classList.remove("active");
+// });
+
+// toggle.addEventListener("click", () => {
+//   toggle.classList.toggle("active");
+//   navMenu.classList.toggle("active");
+//   if (toggle.classList.contains("active")) {
+//     togglerImage.src = toggleClose;
+//   } else {
+//     togglerImage.src = toggleOpen;
+//   }
+// });

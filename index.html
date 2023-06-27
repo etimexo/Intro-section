@@ -13,43 +13,64 @@
     <div class="container">
       <nav class="navbar">
         <div class="logo navbar-brand"><img src="./images/logo.svg" alt=""></div>
-        <div class="toggler"><img src="./images/icon-menu.svg" alt=""></div>
+        <div class="toggler" id="toggler"><img src="./images/icon-menu.svg" alt=""></div>
         <ul class="nav-menu">
-          <li class="nav-item features">
-            <a class="nav-link link1" href="#">Features <span class="arrow"><img src="./images/icon-arrow-down.svg" alt=""></span></a>
+          <li class="nav-item">
+            <a  class="nav-item features nav-link" href="#">Features <span class="arrow"><img src="./images/icon-arrow-down.svg" alt=""></span></a>
             <ul class="dropdown1">
-              <li><img src="./images/icon-todo.svg" alt="...">Todo List</li>
-              <li><img src="./images/icon-calendar.svg" alt="...">Calendar</li>
-              <li><img src="./images/icon-reminders.svg" alt="...">Remiders</li>
-              <li><img src="./images/icon-planning.svg" alt="...">Planning</li>
+              <li class="drop-img"><img src="./images/icon-todo.svg" alt="...">Todo List</li>
+              <li class="drop-img"><img src="./images/icon-calendar.svg" alt="...">Calendar</li>
+              <li class="drop-img"><img src="./images/icon-reminders.svg" alt="...">Remiders</li>
+              <li class="drop-img"><img src="./images/icon-planning.svg" alt="...">Planning</li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#">Company</a></li>
+          <li class="nav-item">
+            <a class="nav-link company" href="#">Company <span class="arrow"><img src="./images/icon-arrow-down.svg" alt=""></span></a>
+            <ul class="dropdown2">
+              <li class="drop-text">History</li>
+              <li class="drop-text">Our Team</li>
+              <li class="drop-text">Blog</li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About</a></li>
           <div class="other">
             <li class="login nav-item"><a class="nav-link" href="#">Login</a></li>
-            <button>
+            <button class="register">
               <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
             </button>
           </div>
         </ul>
       </nav>
-      </div>
-      Make remote work
-
-      Get your team in sync, no matter your location. Streamline processes, 
-      create team rituals, and watch productivity soar.
-    
-      Learn more
+      <section class="sec1">
+        <div class="row row1">
+          <div class="col col-make">
+            <div class="col-imgd">
+              <img class="img-mobile" src="./images/image-hero-mobile.png" alt="">
+            </div>
+            <h1 class="h-mobile">
+              Make remote work
+            </h1>
+            <h1 class="h-desktop">
+              Make <br>
+              remote work
+            </h1> <br>
+              <p>
+                Get your team in sync, no matter your location. Streamline processes, 
+                create team rituals, and watch productivity soar.
+              </p>
+              <button class="learn">
+                Learn more
+              </button>
+          </div>
+          <div class="col col-img">
+            <img class="img-desktop" src="./images/image-hero-desktop.png" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
     </div>
   </main>
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
