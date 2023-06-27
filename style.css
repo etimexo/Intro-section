@@ -52,6 +52,13 @@ body {
     color: hsl(0, 0%, 41%);
     font-size: 1.7rem;
 }
+.navbar .nav-link:hover, .navbar .nav-link:focus {
+    color: black;
+}
+.navbar .logo:focus, .navbar .logo:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 576px) {
     * {
         text-align: center;
@@ -62,7 +69,7 @@ body {
         width: 100%;
     }
     .navbar .logo {
-        margin-right: 60%;
+        margin-right: 65%;
     }
     .toggler {
         display: block;
@@ -118,16 +125,38 @@ body {
         padding: 0 10px;
     }
     .row1 button {
-        width: 50vw;
+        width: 45vw;
         height: 10vh;
-        margin: 20px auto;
+        margin: 40px auto;
         padding: 10px 20px;
         background-color: black;
         font-weight: 700;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         border: none;
         border-radius: 30px;
+    }
+}
+@media (min-width: 577px) {
+    .navbar {
+        width: 100%;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 10px 30px;
+    }
+    /* .navbar .logo {
+        margin-right: 50%;
+    } */
+    .nav-menu {
+        display: flex;
+    }
+    .navbar .toggler {
+        display: none;
+    }
+    .navbar ul li {
+        display: inline-block   ;
     }
 }
 @media (min-width: 992px) {
@@ -201,11 +230,24 @@ body {
     }
     .sec1 .col-make button {
         margin-top: 50px;
-        width: 10vw;
+        width: 13vw;
         height: 10vh;
         padding: 10px 20px;
-        border-radius: 30px;
+        border-radius: 20px;
         border: none;
+        background-color: black;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .sec1 .col-make button:hover, .sec1 .col-make button:focus {
+        cursor: pointer;
+        color: black;
+        background-color: #fff;
+        border: 1px solid black;
+    }
+    .row1 .minis {
+        padding-top: 50px;
     }
 }
 
