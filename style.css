@@ -59,10 +59,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 576px) {
-    * {
-        text-align: center;
-    }
+@media (max-width: 680px) {
     .navbar {
         display: flex;
         padding: 20px;
@@ -81,22 +78,65 @@ body {
     .nav-menu {
         position: fixed;
         right: -1000px;
-        top: 0;
+        top: 20px;
         display: flex;
         flex-direction: column;
-        background-color: yellow;
-        width: 80%;
+        background-color: #fff;
+        width: 70%;
         text-align: left;
         height: 100vh;
         transition: 0.5s;
         padding-top: 50px;
     }
-    .nav-menu .nav-item {
-        left: 20px;
-        padding: 15px;
-    }
     .nav-menu.active {
         right: 0;
+    }
+    .nav-menu .nav-item {
+        padding: 15px 20px;
+    }
+    .navbar .other {
+        width: 100%;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .navbar .login {
+        display: block;
+    }
+    .navbar .register {
+        width: 80%;
+        height: 8vh;
+        padding: 0;
+        border: 1px solid hsl(0, 0%, 41%);
+    }
+    .nav-menu .features {
+        padding-left: 0;
+    }
+
+    .dropdown1 li, .dropdown2 li {
+        padding-top: 10px;
+    }
+    .dropdown1 {
+        transition: 0.5s;
+        padding-bottom: 0;
+    }
+    .dropdown2 {
+        transition: 0.5s;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .dropdown1.active {
+        position: static;
+        display: block;
+        background-color: inherit;
+        left: 30vw;
+        margin-bottom: 5px;
+    }
+    .dropdown2.active {
+        position: static;
+        display: block;
+        background-color: inherit;
+        height: 17vh;
+        left: 22%;
     }
     .sec1 {
         width: 100%;
@@ -125,9 +165,12 @@ body {
         padding: 0 10px;
     }
     .row1 button {
-        width: 45vw;
+        width: 50%;
         height: 10vh;
         margin: 40px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 10px 20px;
         background-color: black;
         font-weight: 700;
@@ -135,44 +178,39 @@ body {
         font-size: 1.3rem;
         border: none;
         border-radius: 30px;
+        text-align: center;
+    }
+    .minis {
+        margin-bottom: 40px;
     }
 }
-@media (min-width: 577px) {
+
+@media (min-width: 681px) {
     .navbar {
         width: 100%;
     }
     .navbar {
         display: flex;
         align-items: center;
-        padding: 10px 30px;
-    }
-    /* .navbar .logo {
-        margin-right: 50%;
-    } */
-    .nav-menu {
-        display: flex;
-    }
-    .navbar .toggler {
-        display: none;
-    }
-    .navbar ul li {
-        display: inline-block   ;
-    }
-}
-@media (min-width: 992px) {
-    .navbar {
-        width: 100%;
-    }
-    .navbar {
-        display: flex;
-        align-items: center;
-        padding: 10px 30px;
+        padding: 10px 50px;
     }
     .navbar .toggler {
         display: none;
     }
     .nav-menu .features {
         cursor: pointer;
+    }
+    .navbar .nav-menu li {
+        padding: 1px 12px;
+    }
+    .navbar .logo {
+        padding-top: 10px;
+        margin-right: 5vw;
+    }
+    .navbar .other {
+        display: inline;
+        margin-left: auto;
+        padding-left: 35vw;
     }
     .dropdown1.active {
         display: block;
@@ -197,17 +235,7 @@ body {
     .dropdown1 .drop-img img {
         padding-right: 12px;    
     }
-    .navbar .nav-menu li {
-        padding: 1px 12px;
-    }
-    .navbar .logo {
-        padding-top: 10px;
-        margin-right: 5vw;
-    }
-    .navbar .other {
-        display: inline;
-        margin-left: 42vw;
-    }
+   
     .sec1 {
         width: 95%;
         height: 70vh;
@@ -247,8 +275,9 @@ body {
         border: 1px solid black;
     }
     .row1 .minis {
-        padding-top: 50px;
+        padding-top: 100px;
+    }
+    .h-mobile {
+        display: none;
     }
 }
-
-
